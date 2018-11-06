@@ -13,7 +13,9 @@ class AuthController < ApplicationController
   end
 
   def show
-    token = request.headers["Authorization"]
+    token = request.headers["Authorization"].split(" ")[1]
+    token = decode_token(token)[0]["id"]
+
     user = User.find_by(id: token)
 
     if user
