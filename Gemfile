@@ -19,6 +19,7 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'pry'
 gem 'rest-client'
 gem 'json'
+gem 'jwt'
 # gem 'activerecord-userstamp'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

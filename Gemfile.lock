@@ -24,7 +24,7 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_model_serializers (0.10.7)
+    active_model_serializers (0.10.8)
       actionpack (>= 4.1, < 6)
       activemodel (>= 4.1, < 6)
       case_transform (>= 0.2)
@@ -56,7 +56,7 @@ GEM
     case_transform (0.2)
       activesupport
     coderay (1.1.2)
-    concurrent-ruby (1.1.0)
+    concurrent-ruby (1.1.2)
     crass (1.0.4)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
@@ -70,6 +70,7 @@ GEM
       concurrent-ruby (~> 1.0)
     json (2.1.0)
     jsonapi-renderer (0.2.0)
+    jwt (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -81,7 +82,7 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
-    method_source (0.9.0)
+    method_source (0.9.1)
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2018.0812)
@@ -95,11 +96,11 @@ GEM
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
     pg (1.1.3)
-    pry (0.11.3)
+    pry (0.12.0)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     puma (3.12.0)
-    rack (2.0.5)
+    rack (2.0.6)
     rack-cors (1.0.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -168,6 +169,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   json
+  jwt
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   pry
