@@ -19,7 +19,7 @@ class AuthController < ApplicationController
     user = User.find_by(id: token)
 
     if user
-      render json: {username: user.username, id: user.id }
+      render json: {username: user.username, id: user.id, name:user.name }
     else
       render json: {error: 'Invalid token'}, status: 401
     end
