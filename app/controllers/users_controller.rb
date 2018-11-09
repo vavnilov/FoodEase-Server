@@ -20,6 +20,13 @@ class UsersController < ApplicationController
     # byebug
   end
 
+  def unfollow
+    follower_id = decode_token(params[:user])[0]["id"]
+    followed_id = params[:followed_id]
+    # byebug
+    User.find(follower_id).unfollow(User.find(followed_id))
+  end
+
   private
 
   def user_params
