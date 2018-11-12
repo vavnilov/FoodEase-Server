@@ -13,11 +13,14 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
 
   validates :name, presence: true
-  validates :name, length: {maximum: 15, message: "Name is too long."}
+  validates :name, length: {maximum: 15}
 
   validates :username, presence: true
   validates :username, uniqueness: true
-  validates :username, length: {maximum: 15, message: "User name is too long."}
+  validates :username, length: {minimum: 3, maximum: 15}
+
+  validates :password, presence: true
+  validates :password, length: {minimum: 5, maximum: 15}
 
   def follow(other)
     active_relationships.create(followed_id: other.id)
