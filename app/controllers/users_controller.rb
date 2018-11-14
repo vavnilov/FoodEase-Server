@@ -13,11 +13,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      render json: @user, status: :accepted
+      token = issue_token({id: @user.id})
+      render json: {jwt: token}, status: :accepted
     else
       render json: { errors: @user.errors.full_messages }, status: :unprocessible_entity
     end
-    # byebug
   end
 
   def unfollow
